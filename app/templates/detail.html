@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} {{car["type_car"]}} {% endblock title %}
+
+{% block content %}
+<h1>{{car['type_car']}}</h1>
+<h3>{{car['color']}}</h3>
+<h3>{{car['license']}}</h3>
+<h3>{{car['owner_last_name']}}</h3>
+<h3>{{car['owner_first_name']}}</h3>
+<a class="btn btn-secondary" href="{{ url_for('display_all_cars') }}">Go Back</a>
+<a class="btn btn-danger" href="{{ url_for('delete_car', pk=car['id']) }}">Delete</a>
+{% endblock content %}

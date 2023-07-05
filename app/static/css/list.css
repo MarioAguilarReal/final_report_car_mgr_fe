@@ -1,0 +1,20 @@
+.list-tasks .task{
+    list-style: none;
+    border: solid 1px black;
+    border-radius: 5px;
+    display: flex;
+    width: 50%;
+}
+
+.list-tasks .task .info{
+    flex: 3;
+}
+
+.list-tasks .task .info h5{
+    text-transform: capitalize;
+}
+
+.list-tasks .task .delete-section{
+    flex: 1;
+    padding-top:15px;
+}

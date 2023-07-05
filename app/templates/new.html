@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block title %}New Car{% endblock title %}
+
+{% block content %}
+<h1>New Car</h1>
+<form method="post" action="{{url_for('create_car') }}">
+    <p>
+        <label for="type_car">Type:</label>
+        <input type="text" placeholder="Car type..." name="type_car" id="id_car_type">
+    </p>
+    <p>
+        <label for="color">Color:</label>
+        <input type="text" placeholder="Color..." name="color" id="id_color">
+    </p>
+    <p>
+        <label for="license">License Plate:</label>
+        <input type="text" placeholder="License Plate..." name="license" id="id_license">
+    </p>
+    <p>
+        <label for="owner_last_name">Last Name:</label>
+        <input type="text" placeholder="Last Name..." name="owner_last_name" id="id_owner_last_name">
+    </p>
+    <p>
+        <label for="owner_first_name">Type:</label>
+        <input type="text" placeholder="First name..." name="owner_first_name" id="id_owner_first_name">
+    </p>
+    <input type="submit" class="btn btn-success" value="Create">
+</form>
+{% endblock content %}

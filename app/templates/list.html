@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Cars{% endblock title %}
+
+{% block content %}
+<h1>Cars</h1>
+<section class="list-tasks">
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Type</th>
+                <th scope="col">Color</th>
+                <th scope="col">license Plate</th>
+                <th scope="col">Owner_last_name</th>
+                <th scope="col">Owner_first_name</th>
+                <th scope="col">View Car</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for car in cars %}
+            <tr>
+                <th scope="row">{{car['id']}}</th>
+                <td >{{car['type_car']}}</td>
+                <td>{{car['color']}}</td>
+                <td>{{car['license']}}</td>
+                <td>{{car['owner_last_name']}}</td>
+                <td>{{car['owner_first_name']}}</td>
+                <td><a class="btn btn-primary" href="{{ url_for('display_car', pk=car['id']) }}">More Detail</a><td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</section>
+{% endblock content %}
